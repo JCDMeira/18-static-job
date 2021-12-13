@@ -1,14 +1,12 @@
 import React from 'react';
+import { GlobalStyle } from './Global';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <div className="conteiner">
-        <div className="content">
-          <h1>Hello world</h1>
-        </div>
-      </div>
-    </div>
+    <>
+      <GlobalStyle />
+      <h1>Hello world</h1>;
+    </>
   );
 }
 
