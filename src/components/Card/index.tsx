@@ -2,9 +2,9 @@ import React from 'react';
 
 import { CardConteiner } from './style';
 
-export const Card = (): JSX.Element => {
+export const Card = (keys: string): JSX.Element => {
   return (
-    <CardConteiner>
+    <CardConteiner key={keys}>
       <h1>card</h1>
     </CardConteiner>
   );

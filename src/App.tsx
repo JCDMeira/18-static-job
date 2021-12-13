@@ -1,10 +1,12 @@
 import React from 'react';
 
 import { Conteiner, GlobalStyle } from './Global';
-import { Card } from './components/Card';
+// import { Card } from './components/Card';
 
 import mobileBackground from './assets/images/bg-header-mobile.svg';
 import desktopBackground from './assets/images/bg-header-desktop.svg';
+
+import * as data from './utils/data.json';
 
 function App(): JSX.Element {
   return (
@@ -17,7 +19,7 @@ function App(): JSX.Element {
         </div>
         <div className="content">
           <div className="search"></div>
-          <Card />
+          {console.log(data)}
         </div>
       </Conteiner>
     </>
