@@ -21,8 +21,8 @@ function App(): JSX.Element {
         </div>
         <div className="content">
           <div className="search"></div>
-          {data.map((value) => {
-            console.log(value.id);
+          {data.map((value, index) => {
+            return <Card key={index} id={value.id} />;
           })}
         </div>
       </Conteiner>
