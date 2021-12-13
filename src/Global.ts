@@ -23,4 +23,38 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Conteiner = styled.div`
   background: var(--desaturated-dark-cyan);
+  width: 100%;
+  height: 317.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .background {
+    width: 100%;
+    height: 15.6rem;
+
+    .mobile {
+      height: 100%;
+    }
+  }
+
+  .search {
+    width: 87.73333333333333vw;
+    height: 12.1rem;
+    position: relative;
+    background: yellow;
+    margin-top: -3.7rem;
+    border-radius: 0.5rem;
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--light-grayish-cyan);
+    position: relative;
+  }
 `;

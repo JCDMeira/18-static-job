@@ -1,11 +1,20 @@
 import React from 'react';
-import { GlobalStyle } from './Global';
+import { Conteiner, GlobalStyle } from './Global';
+
+import mobileBackground from './assets/images/bg-header-mobile.svg';
 
 function App(): JSX.Element {
   return (
     <>
       <GlobalStyle />
-      <h1>Hello world</h1>;
+      <Conteiner>
+        <div className="background">
+          <img className="mobile" src={mobileBackground} alt="background" />
+        </div>
+        <div className="content">
+          <div className="search"></div>
+        </div>
+      </Conteiner>
     </>
   );
 }
