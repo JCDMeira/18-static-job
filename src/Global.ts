@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     --grayish-cyan: #EEF6F6;
     --dark-grayish-cyan: #7B8E8E;
     --very-dark-grayish-cyan: #2C3A3A;
+    --white: #fff;
   }
 
   *{
@@ -36,6 +37,9 @@ export const Conteiner = styled.div`
     .mobile {
       height: 100%;
     }
+    .desktop {
+      display: none;
+    }
   }
 
   .search {
@@ -43,12 +47,14 @@ export const Conteiner = styled.div`
     height: 12.1rem;
     position: relative;
     background: yellow;
-    margin-top: -3.7rem;
+    margin-top: -9.2rem;
+    margin-bottom: 5.6rem;
     border-radius: 0.5rem;
     display: none;
   }
 
   .content {
+    padding-top: 5.5rem;
     width: 100%;
     flex: 1;
     display: flex;
