@@ -8,7 +8,8 @@ import { Card } from './components/Card';
 import mobileBackground from './assets/images/bg-header-mobile.svg';
 import desktopBackground from './assets/images/bg-header-desktop.svg';
 
-import { default as data } from './utils/data.json';
+import { default as data } from './data/data.json';
+import { SearchJob } from './components/SearchJob';
 
 function App(): JSX.Element {
   return (
@@ -20,7 +21,7 @@ function App(): JSX.Element {
           <img className="desktop" src={desktopBackground} alt="background" />
         </div>
         <div className="content">
-          <div className="search"></div>
+          <SearchJob />
           {data.map((value, index) => {
             return <Card key={index} id={value.id} />;
           })}

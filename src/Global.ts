@@ -42,17 +42,6 @@ export const Conteiner = styled.div`
     }
   }
 
-  .search {
-    width: 87.73333333333333vw;
-    height: 12.1rem;
-    position: relative;
-    background: yellow;
-    margin-top: -9.2rem;
-    margin-bottom: 5.6rem;
-    border-radius: 0.5rem;
-    display: none;
-  }
-
   .content {
     padding-top: 5.5rem;
     width: 100%;
