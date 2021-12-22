@@ -38,7 +38,9 @@ export const Card = ({ data }: CardType): JSX.Element => {
         </div>
       </div>
 
-      <div>
+      <h1 className="position">{data.position}</h1>
+
+      <div className="infoJob">
         <p>{data.postedAt}</p>
         <p>{data.contract}</p>
         <p>{data.location}</p>

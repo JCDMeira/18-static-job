@@ -78,4 +78,49 @@ export const CardConteiner = styled.div<CardConteinerProps>`
       }
     }
   }
+
+  .position {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+
+    margin-top: 1.3rem;
+
+    color: var(--very-dark-grayish-cyan);
+  }
+
+  .infoJob {
+    width: 28.1rem;
+    padding-right: 7.1rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+
+    margin-top: 1.6rem;
+    border-bottom: 1px solid var(--dark-grayish-cyan);
+
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    position: relative;
+
+    color: var(--dark-grayish-cyan);
+
+    p:nth-child(1)::after {
+      content: '.';
+      position: absolute;
+      font-size: 2.6rem;
+      bottom: 2.6rem;
+      margin-left: 0.4rem;
+    }
+    p:nth-child(2)::after {
+      content: '.';
+      position: absolute;
+      font-size: 2.6rem;
+      bottom: 2.6rem;
+      margin-left: 0.4rem;
+    }
+  }
 `;
