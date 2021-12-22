@@ -23,16 +23,19 @@ interface CardType {
 
 export const Card = ({ data }: CardType): JSX.Element => {
   return (
-    <CardConteiner isNew={data.new}>
+    <CardConteiner isNew={data.new} isFeatured={data.featured}>
       <img className="logo" src={data.logo} alt={`${data.company} logo`} />
-      <h1>{data.company}</h1>
 
-      <div className="new">
-        <h2>New!</h2>
-      </div>
+      <div className="info">
+        <h1 className="company">{data.company}</h1>
 
-      <div className="featured">
-        <h2>Featured</h2>
+        <div className="new">
+          <h2>New!</h2>
+        </div>
+
+        <div className="featured">
+          <h2>Featured</h2>
+        </div>
       </div>
 
       <div>
