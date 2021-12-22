@@ -22,11 +22,9 @@ interface CardType {
 }
 
 export const Card = ({ data }: CardType): JSX.Element => {
-  console.log(data);
-
   return (
-    <CardConteiner>
-      <img src={data.logo} alt="logo" />
+    <CardConteiner isNew={data.new}>
+      <img className="logo" src={data.logo} alt={`${data.company} logo`} />
       <h1>{data.company}</h1>
 
       <div className="new">

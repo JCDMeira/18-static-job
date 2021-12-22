@@ -23,8 +23,6 @@ function App(): JSX.Element {
         <div className="content">
           <SearchJob />
           {data.map((value, index) => {
-            console.log(value);
-
             return <Card key={index} data={value} />;
           })}
         </div>

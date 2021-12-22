@@ -2,7 +2,7 @@
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "../../assets/images/photosnap.svg",
+    "logo": "https://i.ibb.co/XyCMjgw/photosnap.png",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -17,7 +17,7 @@
   {
     "id": 2,
     "company": "Manage",
-    "logo": "../../assets/images/manage.svg",
+    "logo": "https://i.ibb.co/cDKpYwj/manage.png",
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "company": "Account",
-    "logo": "../../assets/images/account.svg",
+    "logo": "https://i.ibb.co/n3wcHth/account.png",
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -47,7 +47,7 @@
   {
     "id": 4,
     "company": "MyHome",
-    "logo": "../../assets/images/myhome.svg",
+    "logo": "https://i.ibb.co/hZpvng1/myhome.png",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -62,7 +62,7 @@
   {
     "id": 5,
     "company": "Loop Studios",
-    "logo": "../../assets/images/loop-studios.svg",
+    "logo": "https://i.ibb.co/2cD647y/loop-studios.png",
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -77,7 +77,7 @@
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "../../assets/images/faceit.svg",
+    "logo": "https://i.ibb.co/G0NkcNY/faceit.png",
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -92,7 +92,7 @@
   {
     "id": 7,
     "company": "Shortly",
-    "logo": "../../assets/images/shortly.svg",
+    "logo": "https://i.ibb.co/xS2BB04/shortly.png",
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -107,7 +107,7 @@
   {
     "id": 8,
     "company": "Insure",
-    "logo": "../../assets/images/insure.svg",
+    "logo": "https://i.ibb.co/bBTm25V/insure.png",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -122,7 +122,7 @@
   {
     "id": 9,
     "company": "Eyecam Co.",
-    "logo": "../../assets/images/eyecam-co.svg",
+    "logo": "https://i.ibb.co/jTK0HRz/eyecam-co.png",
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -137,7 +137,7 @@
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": "../../assets/images/the-air-filter-company.svg",
+    "logo": "https://i.ibb.co/7Cs5gWY/the-air-filter-company.png",
     "new": false,
     "featured": false,
     "position": "Front-end Dev",

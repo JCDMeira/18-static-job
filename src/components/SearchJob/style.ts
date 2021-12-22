@@ -6,7 +6,7 @@ export const SearchJob = styled.div`
   position: relative;
   background: white;
   margin-top: -9.2rem;
-  margin-bottom: 5.6rem;
+  margin-bottom: 3.3rem;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 0px 2px rgba(230, 230, 230, 0.8);
   display: flex;
