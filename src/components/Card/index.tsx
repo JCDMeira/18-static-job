@@ -5,6 +5,7 @@ import { CardConteiner } from './style';
 
 interface CardType {
   data: {
+    canShow: boolean;
     id: number;
     company: string;
     logo: string;

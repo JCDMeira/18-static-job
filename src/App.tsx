@@ -15,9 +15,13 @@ import { string } from 'prop-types';
 function App(): JSX.Element {
   const [filters, setFilters] = useState([]);
 
-  const [allJobs, setAllJobs] = useState([...data]);
+  const [allJobs, setAllJobs] = useState(
+    data.map((job) => ({ ...job, canShow: true })),
+  );
+  console.log(allJobs);
 
   interface dataType {
+    canShow: boolean;
     id: number;
     company: string;
     logo: string;
@@ -49,9 +53,9 @@ function App(): JSX.Element {
       if (
         filterTexts.every((filterText) => textsToCompare.includes(filterText))
       ) {
-        return { ...job, show: true };
+        return { ...job, canShow: true };
       } else {
-        return { ...job, show: false };
+        return { ...job, canShow: false };
       }
     });
 
@@ -69,19 +73,9 @@ function App(): JSX.Element {
         </div>
         <div className="content">
           <SearchJob />
-          {filters.length > 0
-            ? data.map((value, index) => {
-                // console.log(value);
-
-                // const filteredJobs = Object.keys(value).map((key: string) =>
-                //   console.log(key, value[key as keyof dataType]),
-                // );
-
-                return <Card key={index} data={value} />;
-              })
-            : data.map((value, index) => {
-                return <Card key={index} data={value} />;
-              })}
+          {allJobs.map((value) => {
+            return value.canShow && <Card key={value.id} data={value} />;
+          })}
         </div>
       </Conteiner>
     </>
