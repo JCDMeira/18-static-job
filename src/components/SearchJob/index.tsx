@@ -7,7 +7,7 @@ import * as S from './style';
 export const SearchJob = (): JSX.Element => {
   return (
     <S.SearchJob>
-      <input type="text" name="" id="" placeholder="Search your job" />
+      <input type="text" name="job" id="job" placeholder="Search your job" />
     </S.SearchJob>
   );
 };
