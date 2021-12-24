@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { CardConteiner } from './style';
-// import logo from '../../assets/images/photosnap.svg';
 
 interface CardType {
   setFilters: React.Dispatch<React.SetStateAction<never[]>>;
@@ -28,6 +27,8 @@ export const Card = ({ data }: CardType): JSX.Element => {
   const onclick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const result = e.target as HTMLInputElement;
     console.log(result.value);
+    // const resultString = result.value;
+    // setFilters(resultString);
   };
 
   return (
@@ -64,16 +65,34 @@ export const Card = ({ data }: CardType): JSX.Element => {
             {data.role}
           </button>
         )}
-        {data.level && <div className="filterTag">{data.level}</div>}
+        {data.level && (
+          <button
+            value={data.level}
+            className="filterTag"
+            onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
+          >
+            {data.level}
+          </button>
+        )}
         {data.languages.map((language, index) => (
-          <div key={index} className="filterTag">
+          <button
+            key={index}
+            value={language}
+            className="filterTag"
+            onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
+          >
             {language}
-          </div>
+          </button>
         ))}
         {data.tools.map((tool, index) => (
-          <div key={index} className="filterTag">
+          <button
+            key={index}
+            value={tool}
+            className="filterTag"
+            onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
+          >
             {tool}
-          </div>
+          </button>
         ))}
       </div>
     </CardConteiner>

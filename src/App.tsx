@@ -10,9 +10,9 @@ import desktopBackground from './assets/images/bg-header-desktop.svg';
 
 import { default as data } from './data/data.json';
 import { SearchJob } from './components/SearchJob';
-import { string } from 'prop-types';
 
 function App(): JSX.Element {
+  // const [filters, setFilters] = useState<string[]>([]);
   const [filters, setFilters] = useState([]);
 
   const [allJobs, setAllJobs] = useState(
