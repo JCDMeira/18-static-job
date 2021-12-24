@@ -18,7 +18,6 @@ function App(): JSX.Element {
   const [allJobs, setAllJobs] = useState(
     data.map((job) => ({ ...job, canShow: true })),
   );
-  console.log(allJobs);
 
   interface dataType {
     canShow: boolean;
@@ -74,7 +73,11 @@ function App(): JSX.Element {
         <div className="content">
           <SearchJob />
           {allJobs.map((value) => {
-            return value.canShow && <Card key={value.id} data={value} />;
+            return (
+              value.canShow && (
+                <Card key={value.id} data={value} setFilters={setFilters} />
+              )
+            );
           })}
         </div>
       </Conteiner>
