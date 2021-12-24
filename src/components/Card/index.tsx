@@ -57,7 +57,9 @@ export const Card = ({
 
       <div className="infoJob">
         <p>{data.postedAt}</p>
+        <p className="dot">.</p>
         <p>{data.contract}</p>
+        <p className="dot">.</p>
         <p>{data.location}</p>
       </div>
 

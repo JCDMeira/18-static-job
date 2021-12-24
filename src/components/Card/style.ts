@@ -92,7 +92,7 @@ export const CardConteiner = styled.div<CardConteinerProps>`
 
   .infoJob {
     width: 28.1rem;
-    padding-right: 7.1rem;
+    padding-right: 5rem;
     height: 3.5rem;
     display: flex;
     justify-content: space-between;
@@ -108,7 +108,13 @@ export const CardConteiner = styled.div<CardConteinerProps>`
 
     color: var(--dark-grayish-cyan);
 
-    p:nth-child(1)::after {
+    .dot {
+      font-size: 2.6rem;
+      bottom: 0.7rem;
+      position: relative;
+    }
+
+    /* p:nth-child(1)::after {
       content: '.';
       position: absolute;
       font-size: 2.6rem;
@@ -121,7 +127,7 @@ export const CardConteiner = styled.div<CardConteinerProps>`
       font-size: 2.6rem;
       bottom: 2.6rem;
       margin-left: 0.4rem;
-    }
+    } */
   }
 
   .tagsContent {
