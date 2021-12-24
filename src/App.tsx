@@ -13,7 +13,7 @@ import { SearchJob } from './components/SearchJob';
 
 function App(): JSX.Element {
   // const [filters, setFilters] = useState<string[]>([]);
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState<string[]>([]);
 
   const [allJobs, setAllJobs] = useState(
     data.map((job) => ({ ...job, canShow: true })),
@@ -75,7 +75,12 @@ function App(): JSX.Element {
           {allJobs.map((value) => {
             return (
               value.canShow && (
-                <Card key={value.id} data={value} setFilters={setFilters} />
+                <Card
+                  key={value.id}
+                  data={value}
+                  setFilters={setFilters}
+                  currentFilters={filters}
+                />
               )
             );
           })}

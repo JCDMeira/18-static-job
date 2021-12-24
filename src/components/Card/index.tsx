@@ -4,7 +4,8 @@ import React from 'react';
 import { CardConteiner } from './style';
 
 interface CardType {
-  setFilters: React.Dispatch<React.SetStateAction<never[]>>;
+  currentFilters: string[];
+  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
   data: {
     canShow: boolean;
     id: number;
@@ -23,12 +24,17 @@ interface CardType {
   };
 }
 
-export const Card = ({ data }: CardType): JSX.Element => {
+export const Card = ({
+  data,
+  setFilters,
+  currentFilters,
+}: CardType): JSX.Element => {
   const onclick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const result = e.target as HTMLInputElement;
     console.log(result.value);
-    // const resultString = result.value;
-    // setFilters(resultString);
+    const resultString = [...currentFilters, result.value];
+    console.log(resultString);
+    setFilters(resultString);
   };
 
   return (
