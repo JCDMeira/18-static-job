@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-import { CardConteiner } from './style';
+import * as S from './style';
 
 interface CardType {
   currentFilters: string[];
@@ -38,7 +38,7 @@ export const Card = ({
   };
 
   return (
-    <CardConteiner isNew={data.new} isFeatured={data.featured}>
+    <S.CardConteiner isNew={data.new} isFeatured={data.featured}>
       <img className="logo" src={data.logo} alt={`${data.company} logo`} />
 
       <div className="info">
@@ -61,46 +61,42 @@ export const Card = ({
         <p>{data.location}</p>
       </div>
 
-      <div>
+      <div className="tagsContent">
         {data.role && (
-          <button
+          <S.filterTag
             value={data.role}
-            className="filterTag"
             onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
           >
             {data.role}
-          </button>
+          </S.filterTag>
         )}
         {data.level && (
-          <button
+          <S.filterTag
             value={data.level}
-            className="filterTag"
             onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
           >
             {data.level}
-          </button>
+          </S.filterTag>
         )}
         {data.languages.map((language, index) => (
-          <button
+          <S.filterTag
             key={index}
             value={language}
-            className="filterTag"
             onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
           >
             {language}
-          </button>
+          </S.filterTag>
         ))}
         {data.tools.map((tool, index) => (
-          <button
+          <S.filterTag
             key={index}
             value={tool}
-            className="filterTag"
             onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
           >
             {tool}
-          </button>
+          </S.filterTag>
         ))}
       </div>
-    </CardConteiner>
+    </S.CardConteiner>
   );
 };

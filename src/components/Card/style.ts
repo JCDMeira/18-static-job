@@ -123,4 +123,24 @@ export const CardConteiner = styled.div<CardConteinerProps>`
       margin-left: 0.4rem;
     }
   }
+
+  .tagsContent {
+    margin-top: 1.7rem;
+    padding-right: 2rem;
+  }
+`;
+
+export const filterTag = styled.button`
+  padding: 0.7rem;
+  border: none;
+  margin-right: 1.7rem;
+  margin-bottom: 1.6rem;
+  background: var(--grayish-cyan);
+  border-radius: 5px;
+
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+
+  color: var(--desaturated-dark-cyan);
 `;
