@@ -26,6 +26,11 @@ export const SearchJob = styled.div`
     outline: 0;
   }
 
+  .tagsConteiner {
+    width: 80%;
+    background: red;
+  }
+
   .tag {
     height: 3.2rem;
     display: flex;
@@ -39,6 +44,7 @@ export const SearchJob = styled.div`
       font-size: 1.3rem;
       line-height: 1.5rem;
       margin-right: 0.7rem;
+      padding: 10px 7px;
 
       color: var(--desaturated-dark-cyan);
     }
@@ -59,6 +65,8 @@ export const SearchJob = styled.div`
     font-weight: bold;
     font-size: 1.3rem;
     line-height: 1.5rem;
+    position: absolute;
+    right: 20px;
 
     color: var(--dark-grayish-cyan);
   }

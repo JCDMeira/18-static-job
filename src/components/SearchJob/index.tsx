@@ -29,7 +29,6 @@ export const SearchJob = ({
 
   return (
     <S.SearchJob>
-      {/* <div className="tagsConteiner"> */}
       {currentFilters.map((filter, index) => {
         return (
           <div className="tag" key={index}>
@@ -44,7 +43,6 @@ export const SearchJob = ({
           </div>
         );
       })}
-      {/* </div> */}
       {/* <input type="text" name="job" id="job" placeholder="Search your job" /> */}
       <button className="clear" onClick={() => handleReset()}>
         Clear

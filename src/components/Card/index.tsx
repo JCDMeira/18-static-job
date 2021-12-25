@@ -40,6 +40,15 @@ export const Card = ({
     }
   };
 
+  const handleAdd = (tag: string) => {
+    const canAdd = currentFilters.some((data) => data === tag);
+
+    if (!canAdd) {
+      const resultString = [...currentFilters, tag];
+      setFilters(resultString);
+    }
+  };
+
   return (
     <S.CardConteiner isNew={data.new} isFeatured={data.featured}>
       <img className="logo" src={data.logo} alt={`${data.company} logo`} />
@@ -47,11 +56,11 @@ export const Card = ({
       <div className="info">
         <h1 className="company">{data.company}</h1>
 
-        <div className="new">
+        <div className="new" onClick={() => handleAdd('New')}>
           <h2>New!</h2>
         </div>
 
-        <div className="featured">
+        <div className="featured" onClick={() => handleAdd('Featured')}>
           <h2>Featured</h2>
         </div>
       </div>
