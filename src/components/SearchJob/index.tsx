@@ -15,12 +15,18 @@ export const SearchJob = ({
   currentFilters,
   setFilters,
 }: SearchJobInterface): JSX.Element => {
+  // - Functions
   const handleRemove = (filter: string) => {
     const newFilters = currentFilters.filter((value) => {
       return value !== filter;
     });
     setFilters(newFilters);
   };
+
+  const handleReset = () => {
+    setFilters([]);
+  };
+
   return (
     <S.SearchJob>
       {currentFilters.map((filter, index) => {
@@ -38,6 +44,9 @@ export const SearchJob = ({
         );
       })}
       <input type="text" name="job" id="job" placeholder="Search your job" />
+      <button className="clear" onClick={() => handleReset()}>
+        Clear
+      </button>
     </S.SearchJob>
   );
 };
