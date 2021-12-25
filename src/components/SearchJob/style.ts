@@ -11,7 +11,7 @@ export const SearchJob = styled.div`
   box-shadow: 0px 0px 0px 2px rgba(230, 230, 230, 0.8);
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 22px;
 
   input {
     border: none;
@@ -24,5 +24,42 @@ export const SearchJob = styled.div`
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+  }
+
+  .tag {
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    margin-right: 1.6rem;
+    background: var(--grayish-cyan);
+    border-radius: 5px;
+
+    span {
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      margin-right: 0.7rem;
+
+      color: var(--desaturated-dark-cyan);
+    }
+
+    .remove {
+      height: 100%;
+      width: 3.2rem;
+      background: var(--desaturated-dark-cyan);
+      border-radius: 0px 5px 5px 0px;
+      border: none;
+    }
+  }
+
+  .clear {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+
+    color: var(--dark-grayish-cyan);
   }
 `;

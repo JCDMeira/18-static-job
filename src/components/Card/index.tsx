@@ -30,9 +30,14 @@ export const Card = ({
   currentFilters,
 }: CardType): JSX.Element => {
   const onclick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const result = e.target as HTMLInputElement;
-    const resultString = [...currentFilters, result.value];
-    setFilters(resultString);
+    const result = (e.target as HTMLInputElement).value;
+
+    const canAdd = currentFilters.some((data) => data === result);
+
+    if (!canAdd) {
+      const resultString = [...currentFilters, result];
+      setFilters(resultString);
+    }
   };
 
   return (
