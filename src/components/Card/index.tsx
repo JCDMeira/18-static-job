@@ -31,9 +31,7 @@ export const Card = ({
 }: CardType): JSX.Element => {
   const onclick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const result = e.target as HTMLInputElement;
-    console.log(result.value);
     const resultString = [...currentFilters, result.value];
-    console.log(resultString);
     setFilters(resultString);
   };
 

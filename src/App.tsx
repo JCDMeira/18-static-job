@@ -71,7 +71,7 @@ function App(): JSX.Element {
           <img className="desktop" src={desktopBackground} alt="background" />
         </div>
         <div className="content">
-          <SearchJob />
+          <SearchJob currentFilters={filters} setFilters={setFilters} />
           {allJobs.map((value) => {
             return (
               value.canShow && (
