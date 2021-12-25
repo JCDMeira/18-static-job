@@ -11,7 +11,6 @@ export const SearchJob = styled.div`
   box-shadow: 0px 0px 0px 2px rgba(230, 230, 230, 0.8);
   display: flex;
   align-items: center;
-  padding: 10px 22px;
 
   input {
     border: none;
@@ -26,16 +25,17 @@ export const SearchJob = styled.div`
     outline: 0;
   }
 
-  .tagsConteiner {
-    width: 80%;
-    background: red;
+  .myTags {
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .tag {
     height: 3.2rem;
     display: flex;
     align-items: center;
-    margin-right: 1.6rem;
+    margin: 0.8rem;
     background: var(--grayish-cyan);
     border-radius: 5px;
 

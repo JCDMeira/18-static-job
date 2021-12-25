@@ -29,20 +29,22 @@ export const SearchJob = ({
 
   return (
     <S.SearchJob>
-      {currentFilters.map((filter, index) => {
-        return (
-          <div className="tag" key={index}>
-            <span>{filter}</span>
-            <button
-              className="remove"
-              value={filter}
-              onClick={() => handleRemove(filter)}
-            >
-              <img src={iconX} alt="remove tag" />
-            </button>
-          </div>
-        );
-      })}
+      <div className="myTags">
+        {currentFilters.map((filter, index) => {
+          return (
+            <div className="tag" key={index}>
+              <span>{filter}</span>
+              <button
+                className="remove"
+                value={filter}
+                onClick={() => handleRemove(filter)}
+              >
+                <img src={iconX} alt="remove tag" />
+              </button>
+            </div>
+          );
+        })}
+      </div>
       {/* <input type="text" name="job" id="job" placeholder="Search your job" /> */}
       <button className="clear" onClick={() => handleReset()}>
         Clear
