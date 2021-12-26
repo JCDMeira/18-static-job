@@ -56,6 +56,11 @@ export const SearchJob = styled.div`
       background: var(--desaturated-dark-cyan);
       border-radius: 0px 5px 5px 0px;
       border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--very-dark-grayish-cyan);
+      }
     }
   }
 
@@ -70,5 +75,14 @@ export const SearchJob = styled.div`
     right: 20px;
 
     color: var(--dark-grayish-cyan);
+
+    &:hover {
+      color: var(--desaturated-dark-cyan);
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 3.5rem;
   }
 `;

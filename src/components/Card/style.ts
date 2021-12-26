@@ -56,6 +56,10 @@ export const CardConteiner = styled.div<CardConteinerProps>`
         line-height: 1.2rem;
         text-transform: uppercase;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .featured {
@@ -76,6 +80,10 @@ export const CardConteiner = styled.div<CardConteinerProps>`
         line-height: 1.2rem;
         text-transform: uppercase;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -88,6 +96,11 @@ export const CardConteiner = styled.div<CardConteinerProps>`
     margin-top: 1.3rem;
 
     color: var(--very-dark-grayish-cyan);
+
+    &:hover {
+      cursor: pointer;
+      color: var(--desaturated-dark-cyan);
+    }
   }
 
   .infoJob {
@@ -121,7 +134,7 @@ export const CardConteiner = styled.div<CardConteinerProps>`
   }
 
   @media (min-width: 1024px) {
-    width: 111.2rem;
+    max-width: 111.2rem;
     height: 15.4rem;
     display: flex;
     padding: 0rem 4.2rem 0 4.1rem;
@@ -171,4 +184,10 @@ export const filterTag = styled.button`
   line-height: 1.5rem;
 
   color: var(--desaturated-dark-cyan);
+
+  &:hover {
+    cursor: pointer;
+    background: var(--desaturated-dark-cyan);
+    color: var(--grayish-cyan);
+  }
 `;
