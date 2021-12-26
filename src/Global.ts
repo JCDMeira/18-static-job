@@ -52,4 +52,20 @@ export const Conteiner = styled.div`
     background: var(--light-grayish-cyan);
     position: relative;
   }
+
+  @media (min-width: 1024px) {
+    height: 208.8rem;
+    .background {
+      width: 100%;
+      height: 15.6rem;
+
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
 `;

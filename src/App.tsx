@@ -12,7 +12,6 @@ import { default as data } from './data/data.json';
 import { SearchJob } from './components/SearchJob';
 
 function App(): JSX.Element {
-  // const [filters, setFilters] = useState<string[]>([]);
   const [filters, setFilters] = useState<string[]>([]);
 
   const [allJobs, setAllJobs] = useState(
