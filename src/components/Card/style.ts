@@ -113,26 +113,48 @@ export const CardConteiner = styled.div<CardConteinerProps>`
       bottom: 0.7rem;
       position: relative;
     }
-
-    /* p:nth-child(1)::after {
-      content: '.';
-      position: absolute;
-      font-size: 2.6rem;
-      bottom: 2.6rem;
-      margin-left: 0.4rem;
-    }
-    p:nth-child(2)::after {
-      content: '.';
-      position: absolute;
-      font-size: 2.6rem;
-      bottom: 2.6rem;
-      margin-left: 0.4rem;
-    } */
   }
 
   .tagsContent {
     margin-top: 1.7rem;
     padding-right: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 111.2rem;
+    height: 15.4rem;
+    display: flex;
+    padding: 0rem 4.2rem 0 4.1rem;
+    align-items: center;
+
+    .logo {
+      position: initial;
+      width: 8.6rem;
+      height: 8.6rem;
+      margin-right: 2.5rem;
+    }
+
+    .info {
+      .company {
+        font-size: 1.4rem;
+        line-height: auto;
+      }
+    }
+
+    .position {
+      font-size: 1.8rem;
+      line-height: auto;
+    }
+
+    .infoJob {
+      font-size: 1.4rem;
+      border: none;
+    }
+
+    .tagsContent {
+      position: absolute;
+      right: 0;
+    }
   }
 `;
 

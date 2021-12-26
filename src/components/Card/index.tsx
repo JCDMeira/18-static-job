@@ -53,28 +53,29 @@ export const Card = ({
     <S.CardConteiner isNew={data.new} isFeatured={data.featured}>
       <img className="logo" src={data.logo} alt={`${data.company} logo`} />
 
-      <div className="info">
-        <h1 className="company">{data.company}</h1>
+      <div className="desktopPosition">
+        <div className="info">
+          <h1 className="company">{data.company}</h1>
 
-        <div className="new" onClick={() => handleAdd('New')}>
-          <h2>New!</h2>
+          <div className="new" onClick={() => handleAdd('New')}>
+            <h2>New!</h2>
+          </div>
+
+          <div className="featured" onClick={() => handleAdd('Featured')}>
+            <h2>Featured</h2>
+          </div>
         </div>
 
-        <div className="featured" onClick={() => handleAdd('Featured')}>
-          <h2>Featured</h2>
+        <h1 className="position">{data.position}</h1>
+
+        <div className="infoJob">
+          <p>{data.postedAt}</p>
+          <p className="dot">.</p>
+          <p>{data.contract}</p>
+          <p className="dot">.</p>
+          <p>{data.location}</p>
         </div>
       </div>
-
-      <h1 className="position">{data.position}</h1>
-
-      <div className="infoJob">
-        <p>{data.postedAt}</p>
-        <p className="dot">.</p>
-        <p>{data.contract}</p>
-        <p className="dot">.</p>
-        <p>{data.location}</p>
-      </div>
-
       <div className="tagsContent">
         {data.role && (
           <S.filterTag
