@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SearchJob = styled.div`
   width: 87.73333333333333vw;
+  max-width: 111.2rem;
   min-height: 6rem;
   position: relative;
   background: white;
