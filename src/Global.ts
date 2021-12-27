@@ -35,6 +35,7 @@ export const Conteiner = styled.div`
     height: 15.6rem;
 
     .mobile {
+      width: 100%;
       height: 100%;
     }
     .desktop {

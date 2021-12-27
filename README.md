@@ -28,7 +28,7 @@ Users should be able to:
 
 ## Screenshot
 
-<!-- ### Mobile design
+### Mobile design
 
 <p  align="center">
   <img width="300px" src="./presentation/mobile.png" align="center"></img>
@@ -42,7 +42,7 @@ Users should be able to:
 
 <p  align="center"><img width="720px" src="./presentation/desktop.png" align="center"></img></p>
 
-### result of my work
+<!-- ### result of my work
 
 <p  align="center"><img width="1080px" src="./presentation/design-x-myWork.gif" align="center"></img></p> -->
 
@@ -50,54 +50,116 @@ Users should be able to:
 
 <!--
 - Solution URL: [My solution for this challenge](https://www.frontendmentor.io/solutions/single-price-grid-with-reactjs-YR5dhXAtZ)
-- Live Site URL: [check the result](https://jcdmeira-single-price.netlify.app)
-- My figma design: [Figma](https://www.figma.com/file/qoi5g7sQ81YZysFwJJoWIz/07---Single-price?node-id=0%3A1) -->
+- Live Site URL: [check the result](https://jcdmeira-single-price.netlify.app)-->
+
+- My figma design: [Figma](https://www.figma.com/file/ayKxjGghHGL7FNiwVvhqOx/18-job-listings?node-id=0%3A1)
 
 ## My process
 
 ### Built with
 
 - Mobile-first workflow
+- typeScript
 - [React](https://reactjs.org/) - JS library
 - [Styled components](https://styled-components.com) - CSS in js with stiled components
 
 ### What I learned
 
-<!--
-Using the grid template areas to define occupied spaces with an alias
+```tsx
+const onclick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const result = (e.target as HTMLInputElement).value;
 
-```CSS
-  .content {
-  display: grid;
-  gap: 0;
-  grid-template-areas:
-    'field1'
-    'field2'
-    'field3';
-}
+  const canAdd = currentFilters.some((data) => data === result);
 
-.field1 {
-  grid-area: field1;
-}
-.field2 {
-  grid-area: field2;
-}
-.field3 {
-  grid-area: field3;
-}
-@media (min-width: 900px) {
-  .content {
-    grid-template-areas:
-      'field1 field1'
-      'field2 field3';
+  if (!canAdd) {
+    const resultString = [...currentFilters, result];
+    setFilters(resultString);
   }
+};
+
+<S.filterTag
+  value={data.role}
+  onClick={(e: React.MouseEvent<HTMLButtonElement>) => onclick(e)}
+>
+  {data.role}
+</S.filterTag>;
+```
+
+```tsx
+const [filters, setFilters] = useState<string[]>([]);
+<SearchJob currentFilters={filters} setFilters={setFilters} />;
+```
+
+```tsx
+interface SearchJobInterface {
+  currentFilters: string[];
+  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
 }
-``` -->
+
+export const SearchJob = ({
+  currentFilters,
+  setFilters,
+}: SearchJobInterface): JSX.Element => {};
+```
+
+```tsx
+const [allJobs, setAllJobs] = useState(
+  data.map((job) => ({ ...job, canShow: true })),
+);
+
+useEffect(() => {
+  const filterTexts = filters.map((filter) => filter);
+
+  const updatedJobs = allJobs.map((job) => {
+    const textsToCompare = [
+      job.role,
+      job.level,
+      ...job.languages,
+      ...job.tools,
+      job.new && 'New',
+      job.featured && 'Featured',
+    ];
+
+    if (
+      filterTexts.every((filterText) => textsToCompare.includes(filterText))
+    ) {
+      return { ...job, canShow: true };
+    } else {
+      return { ...job, canShow: false };
+    }
+  });
+
+  setAllJobs(updatedJobs);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [filters]);
+```
+
+```tsx
+const onclick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const result = (e.target as HTMLInputElement).value;
+
+  const canAdd = currentFilters.some((data) => data === result);
+
+  if (!canAdd) {
+    const resultString = [...currentFilters, result];
+    setFilters(resultString);
+  }
+};
+
+const handleAdd = (tag: string) => {
+  const canAdd = currentFilters.some((data) => data === tag);
+
+  if (!canAdd) {
+    const resultString = [...currentFilters, tag];
+    setFilters(resultString);
+  }
+};
+```
 
 ### Useful resources
 
 - [react tutorial](https://pt-br.reactjs.org/tutorial/tutorial.html) - This helped me structure the components and build the proposed page.
-<!-- - [my figma design](https://www.figma.com/file/qoi5g7sQ81YZysFwJJoWIz/07---Single-price?node-id=0%3A1) - My figma design for help anyone who wants to build this challenge. -->
+- [my figma design](https://www.figma.com/file/ayKxjGghHGL7FNiwVvhqOx/18-job-listings?node-id=0%3A1) - My figma design for help anyone who wants to build this challenge.
 - [CSS units conversor - px to VH/VW/REM](https://it-news.pw/pxtovh/) - CSS units conversor .
 - [Converting Colors](https://convertingcolors.com) - HSL for all color systems.
 
@@ -107,3 +169,7 @@ Using the grid template areas to define occupied spaces with an alias
 - Frontend Mentor - [@JCDMeira](https://www.frontendmentor.io/profile/JCDMeira)
 - Instagram - [@jean.meira10](https://www.instagram.com/jean.meira10/)
 - GitHub - [JCDMeira](https://github.com/JCDMeira)
+
+```
+
+```
